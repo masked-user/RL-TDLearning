@@ -24,12 +24,15 @@ The primary difference lies in how the $Q$-values (the agent's memory of "good" 
 
 These parameters act as the "knobs" that control the speed and depth of the agent's learning:
 
-* **Alpha ($\alpha$) - Learning Rate:** Controls how much new rewards overwrite old memory.
-    * *High $\alpha$:* Fast learning, but potentially unstable.
-    * *Low $\alpha$:* Slow, steady convergence toward a stable solution.
-* **Gamma ($\gamma$) - Discount Factor:** Controls the value of future rewards.
-    * *High $\gamma$ (near 1.0):* Values long-term goals (reaching the "Goal" tile).
-    * *Low $\gamma$ (near 0):* Values immediate gratification (the very next step).
+
+- **Alpha ($\alpha$) – Learning Rate:** Controls how much new information updates previously learned values.
+  - **High $\alpha$:** Learns quickly but may be unstable or fail to converge.
+  - **Low $\alpha$:** Learns more slowly but converges more steadily and reliably.
+
+- **Gamma ($\gamma$) – Discount Factor:** Determines how much future rewards are valued compared to immediate rewards.
+  - **High $\gamma$ (close to 1.0):** Emphasizes long-term rewards (e.g., reaching the goal state).
+  - **Low $\gamma$ (close to 0):** Focuses mainly on immediate rewards with little emphasis on future outcomes.
+
 
 **Convergence:** Both algorithms are designed to converge. **Q-Learning** converges to the mathematically optimal policy. **SARSA** converges to a "safe" policy. If the exploration rate ($\epsilon$) is gradually reduced to zero, both will eventually converge to the same optimal path.
 
