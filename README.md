@@ -10,7 +10,7 @@ The primary difference lies in how the $Q$-values (the agent's memory of "good" 
 
 | Feature | **SARSA** | **Q-Learning** |
 | :--- | :--- | :--- |
-| **Full Name** | State-Action-Reward-State-Action | (Off-policy TD Control) |
+| **Full Name** | State-Action-Reward-State-Action | (Quality Learning TD Control) |
 | **Policy Type** | **On-Policy**: Learns from the *actual* next action taken. | **Off-Policy**: Learns from the *best possible* next action. |
 | **Update Rule** | $$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma Q(s', a') - Q(s, a)]$$|$$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \max_{a'} Q(s', a') - Q(s, a)]$$ |
 | **Behavior** | **Conservative**: Steers clear of the cliff to avoid accidental falls. | **Aggressive**: Takes the risky shortest path along the cliff edge. |
