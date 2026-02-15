@@ -38,7 +38,7 @@ These parameters act as the "knobs" that control the speed and depth of the agen
 
 ---
 
-## 3. Important Code Points
+## 3. Code Explaination
 
 ### A. The Environment (`CliffWalkingEnv`)
 * **Grid Size:** 4 rows by 12 columns.
